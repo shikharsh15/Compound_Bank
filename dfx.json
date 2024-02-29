@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "Compound_Bank": {
+      "main": "src/Compound_Bank/main.mo",
+      "type": "motoko"
+    },
+    "Compound_Bank_assets": {
+      "dependencies": [
+        "Compound_Bank"
+      ],
+      "frontend": {
+        "entrypoint": "src/Compound_Bank_assets/src/index.html"
+      },
+      "source": [
+        "src/Compound_Bank_assets/assets",
+        "dist/Compound_Bank_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
